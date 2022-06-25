@@ -10,8 +10,9 @@
   <body>
     <a-scene background="color: #333333">
       <a-assets>
-          <img id="wood" src="images/wood.jpg" />
-          <img id="wood2" src="images/wood2.jpg" />
+          <!--<img id="wood" src="images/wood.jpg" />-->
+          <!--<img id="wood2" src="images/wood2.jpg" />-->
+          <img id="dsotm1" src="https://assets.theateraandeschie.nl/images/pinkfloydproject-thedarksideofthemoon_slide@2x.jpg" />
           <img id="grass" src="images/grass.jpg" />
       </a-assets>
 
@@ -19,12 +20,68 @@
         <a-entity id="mouseCursor"
           cursor="fuse: true; fuseTimeout: 1500">
         </a-entity>
-        <a-ring id="cursorRing" 
+        <!--<a-ring id="cursorRing" 
           position="0 0 -1"
           radius-inner= "0.02"
           radius-outer= "0.03"
           material="color: red; shader: flat">
-        </a-ring>
+        </a-ring>-->
+        <a-plane id="whiteLine"
+        width="0.07"
+        height="0.0025"
+        color="white"
+        position="-0.05 -0.01 -1"
+        rotation="0 0 20">
+        </a-plane>
+        <a-plane id="redLine"
+        width="0.09"
+        height="0.005"
+        color="red"
+        position="0.05 0 -1"
+        rotation="0 0 -12">
+        </a-plane>
+        <a-plane id="orangeLine"
+        width="0.085"
+        height="0.005"
+        color="orange"
+        position="0.05 -0.005 -1"
+        rotation="0 0 -14">
+        </a-plane>
+        <a-plane id="yellowLine"
+        width="0.08"
+        height="0.005"
+        color="yellow"
+        position="0.05 -0.01 -1"
+        rotation="0 0 -16">
+        </a-plane>
+        <a-plane id="greenLine"
+        width="0.075"
+        height="0.005"
+        color="green"
+        position="0.05 -0.015 -1"
+        rotation="0 0 -18">
+        </a-plane>
+        <a-plane id="blueLine"
+        width="0.07"
+        height="0.005"
+        color="blue"
+        position="0.05 -0.02 -1"
+        rotation="0 0 -18">
+        </a-plane>
+        <a-plane id="purpleLine"
+        width="0.065"
+        height="0.005"
+        color="purple"
+        position="0.05 -0.025 -1"
+        rotation="0 0 -18">
+        </a-plane>
+        <a-triangle id="cursorTriangle"
+          vertex-a="0 0.05 0"
+          vertex-b="-0.05 -0.05 0"
+          vertex-c="0.05 -0.05 0"
+          position="0 0 -1"
+          material="color: black; shader: flat">
+        </a-triangle>
       </a-camera>
       
       <a-box id="myBox" 
@@ -33,7 +90,7 @@
         width="3" 
         height="1" 
         depth="1" 
-        src="#wood"
+        color="pink"
         shadow 
         animation__mouseenter="
           property: components.material.material.color; 
@@ -54,7 +111,7 @@
         width="3" 
         height="1" 
         depth="1" 
-        src="#wood2"
+        color="yellow"
         shadow>  
       </a-box>
       <a-plane id="ground"
@@ -63,9 +120,16 @@
         width="100" 
         height="100" 
         color="#7BC8A4" 
-        material="src: #grass; repeat: 10 10"
         shadow>
       </a-plane> 
+      <a-text id="text"
+        value="Ik heb de textures weggehaald omdat anders alle shapes lokaal voor mij zwart waren. Ik kon niet eens zien wat wat was en het was gewoon niet mee te werken op die manier. Als je erg gehecht bent aan de texturen dan beeld je je maar in dat het groene vlak gras is en de blokken van hout zijn :)"
+        position="-6.5 4.5 -5"
+        color="white"
+        width="6"
+        height="10"
+        depth="1">
+      </a-text>
     </a-scene>
   </body>
 </html>
